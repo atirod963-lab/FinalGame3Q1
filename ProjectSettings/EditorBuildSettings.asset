@@ -11,5 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeons.unity
     guid: 932c03d508083d04696d8e983e68bd55
+  - enabled: 1
+    path: Assets/Scenes/FinalGame3/Rule.unity
+    guid: 0659c0ee3293e8449b800dd2249b4a95
+  - enabled: 1
+    path: Assets/Scenes/FinalGame3/FinalGame1.unity
+    guid: 27376d4a69362854497816f3199442d5
+  - enabled: 1
+    path: Assets/Scenes/FinalGame3/FinalGame2.unity
+    guid: cb0ef12e357fa2b42aa65431db97e49f
+  - enabled: 1
+    path: Assets/Scenes/FinalGame3/FinalGame3.unity
+    guid: 221d23da85a579548a04c283b9727f27
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_UseUCBPForAssetBundles: 0
