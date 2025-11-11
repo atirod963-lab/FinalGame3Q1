@@ -4,7 +4,7 @@ using System.Collections.Generic;
 // กำหนดให้เป็น sealed เพื่อป้องกันการสืบทอด
 public class SoundManager : MonoBehaviour
 {
-   
+
 
     [Header("Audio Sources")]
     // Audio Source สำหรับเพลงประกอบ (Looping)
@@ -17,10 +17,31 @@ public class SoundManager : MonoBehaviour
     public AudioClip defaultBackgroundMusic;
 
     // 3. Singleton Initialization
- 
 
+    public static SoundManager instance;
     // ------------------- Music Controls -------------------
 
+    private void Awake()
+    {
+        // ตรวจสอบว่ามี Instance อยู่แล้วหรือไม่
+        if (instance == null)
+        {
+            instance = this;
+            musicSource = gameObject.AddComponent<AudioSource>();
+            sfxSource = gameObject.AddComponent<AudioSource>();
+
+            musicSource.loop = true;
+            DontDestroyOnLoad(gameObject);
+
+            PlayMusic(defaultBackgroundMusic);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+
+        }
+
+    }
     /// <summary>
     /// เล่นเพลงประกอบใหม่
     /// </summary>
