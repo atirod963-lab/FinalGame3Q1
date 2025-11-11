@@ -63,4 +63,7 @@ public class GameManager : MonoBehaviour
             TogglePause();
         }
     }
+
+
+    
 }
