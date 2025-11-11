@@ -19,6 +19,10 @@ public class ShortSword : Weapon
         {
             damage = 20f;       // เพิ่ม dmg
             attackRange = 2f;   // ระยะไกลขึ้นเท่าตัว
+            Debug.Log("Upgarde");
         }
+
     }
+
+
 }

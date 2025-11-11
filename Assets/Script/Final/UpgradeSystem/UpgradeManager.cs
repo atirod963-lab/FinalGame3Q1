@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    public int killsRequired = 10;
+    public int killsRequired = 3;
 
     public PlayerWeaponHolder weaponHolder;
     public KillManager killManager;
 
     private void Update()
     {
-        if (weaponHolder.currentWeapon == null)
-            return;
+        
 
         string id = weaponHolder.currentWeapon.weaponID;
 
@@ -19,8 +18,10 @@ public class UpgradeManager : MonoBehaviour
         if (kills >= killsRequired)
         {
             UpgradeWeapon(weaponHolder.currentWeapon);
-            killManager.ResetKills(id);
+            killManager.ResetKills(id); 
+            
         }
+        
     }
 
     void UpgradeWeapon(Weapon weapon)

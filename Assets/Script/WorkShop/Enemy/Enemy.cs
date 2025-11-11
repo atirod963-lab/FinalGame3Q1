@@ -46,4 +46,12 @@ public class Enemy : Character
         }
         
     }
+
+    public void Die(Weapon killerWeapon)
+    {
+        KillManager km = FindAnyObjectByType<KillManager>();
+        km.AddKill(killerWeapon.weaponID);
+
+        Destroy(gameObject);
+    }
 }
