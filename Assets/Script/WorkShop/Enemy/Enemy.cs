@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    //ควยหมู
     protected enum State { idel, cheses, attack, death }
 
     [SerializeField]
